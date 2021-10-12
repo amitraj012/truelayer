@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="TrueLayer_Test_Challenge" tests="14" time="3.247">
+  <testsuite name="satellites/[id]/positions_parameterized" id="fae57a9c-7fab-4966-95a2-dc31b6ef4b6e" timestamp="2021-10-10T10:05:21.641Z" tests="2" failures="0" errors="0" time="0.252">
+    <testcase name="Status code is 200" time="0.161" classname="TrueLayerTestChallenge"/>
+    <testcase name="Response data validation for name" time="0.161" classname="TrueLayerTestChallenge"/>
+    <testcase name="Response data validation for id" time="0.161" classname="TrueLayerTestChallenge"/>
+    <testcase name="Response data validation for latitude" time="0.161" classname="TrueLayerTestChallenge"/>
+    <testcase name="Response data validation for longitude" time="0.161" classname="TrueLayerTestChallenge"/>
+    <testcase name="Response data validation for altitude" time="0.161" classname="TrueLayerTestChallenge"/>
+    <testcase name="Response data validation for velocity" time="0.161" classname="TrueLayerTestChallenge"/>
+    <testcase name="Response data validation for visibility" time="0.161" classname="TrueLayerTestChallenge"/>
+    <testcase name="Response data validation for footprint" time="0.161" classname="TrueLayerTestChallenge"/>
+    <testcase name="Response data validation for timestamp" time="0.161" classname="TrueLayerTestChallenge"/>
+    <testcase name="Response data validation for daynum" time="0.161" classname="TrueLayerTestChallenge"/>
+    <testcase name="Response data validation for solar_lat" time="0.161" classname="TrueLayerTestChallenge"/>
+    <testcase name="Response data validation for solar_lon" time="0.161" classname="TrueLayerTestChallenge"/>
+    <testcase name="Response data validation for units" time="0.161" classname="TrueLayerTestChallenge"/>
+    <testcase name="Status is 400" time="0.161" classname="TrueLayerTestChallenge"/>
+    <testcase name="Error message validation" time="0.161" classname="TrueLayerTestChallenge"/>
+  </testsuite>
+  <testsuite name="satelites/[id]/tles" id="79fd57fb-d1fb-4368-893c-0a8a0349575a" timestamp="2021-10-10T10:05:21.641Z" tests="7" failures="0" errors="0" time="0.211">
+    <testcase name="Status code is 200" time="0.429" classname="TrueLayerTestChallenge"/>
+    <testcase name="Response data validation for tle_timestamp" time="0.429" classname="TrueLayerTestChallenge"/>
+    <testcase name="Response data validation for id" time="0.429" classname="TrueLayerTestChallenge"/>
+    <testcase name="Response data validation for name" time="0.429" classname="TrueLayerTestChallenge"/>
+    <testcase name="Response data validation for header" time="0.429" classname="TrueLayerTestChallenge"/>
+    <testcase name="Response data validation for line1" time="0.429" classname="TrueLayerTestChallenge"/>
+    <testcase name="Response data validation for line2" time="0.429" classname="TrueLayerTestChallenge"/>
+  </testsuite>
+</testsuites>

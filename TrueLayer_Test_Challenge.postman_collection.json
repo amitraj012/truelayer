@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "4cb8d912-4a21-4806-8d33-c89402273d0f",
+		"name": "TrueLayer_Test_Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "satellites/[id]/positions_parameterized",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json()\r",
+							"\r",
+							"if(pm.response.code == \"200\"){\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response data validation for name\", function() {\r",
+							"    pm.expect(data.name_0).is.to.eql(jsonData[0].name);\r",
+							"    if(data.name_1 != \"\")\r",
+							"    {\r",
+							"    pm.expect(\"iss\").is.to.eql(jsonData[1].name);\r",
+							"    }\r",
+							" })\r",
+							"\r",
+							"pm.test(\"Response data validation for id\", function() {\r",
+							"    pm.expect(data.Id_0).is.to.eql(jsonData[0].id);\r",
+							"    if(data.Id_1 != \"\")\r",
+							"    {\r",
+							"    pm.expect(data.Id_1).is.to.eql(jsonData[1].id);\r",
+							"    }\r",
+							" })\r",
+							"\r",
+							"pm.test(\"Response data validation for latitude\", function() {\r",
+							"    pm.expect(data.latitude_0).is.to.eql(jsonData[0].latitude);\r",
+							"    if(data.latitude_1 != \"\")\r",
+							"    {\r",
+							"    pm.expect(data.latitude_1).is.to.eql(jsonData[1].latitude);\r",
+							"    }\r",
+							" })\r",
+							"\r",
+							"pm.test(\"Response data validation for longitude\", function() {\r",
+							"    pm.expect(data.longitude_0).is.to.eql(jsonData[0].longitude);\r",
+							"    if(data.longitude_1 != \"\")\r",
+							"    {\r",
+							"    pm.expect(data.longitude_1).is.to.eql(jsonData[1].longitude);\r",
+							"    }\r",
+							" })\r",
+							"pm.test(\"Response data validation for altitude\", function() {\r",
+							"    pm.expect(data.altitude_0).is.to.eql(jsonData[0].altitude);\r",
+							"    if(data.altitude_1 !=\"\")\r",
+							"    {\r",
+							"    pm.expect(data.altitude_1).is.to.eql(jsonData[1].altitude);\r",
+							"    }\r",
+							" })\r",
+							"pm.test(\"Response data validation for velocity\", function() {\r",
+							"    pm.expect(data.velocity_0).is.to.eql(jsonData[0].velocity);\r",
+							"    if(data.velocity_1 !=\"\")\r",
+							"    {\r",
+							"    pm.expect(data.velocity_1).is.to.eql(jsonData[1].velocity);\r",
+							"    }\r",
+							" })\r",
+							"pm.test(\"Response data validation for visibility\", function() {\r",
+							"    pm.expect(data.visibility_0).is.to.eql(jsonData[0].visibility);\r",
+							"    if(data.visibility_1 != \"\")\r",
+							"    {\r",
+							"    pm.expect(data.visibility_1).is.to.eql(jsonData[1].visibility);\r",
+							"    }\r",
+							" })\r",
+							"\r",
+							"pm.test(\"Response data validation for footprint\", function() {\r",
+							"    pm.expect(data.footprint_0).is.to.eql(jsonData[0].footprint);\r",
+							"    if(data.footprint_1 != \"\")\r",
+							"    {\r",
+							"    pm.expect(data.footprint_1).is.to.eql(jsonData[1].footprint);\r",
+							"    }\r",
+							" })\r",
+							"\r",
+							"pm.test(\"Response data validation for timestamp\", function() {\r",
+							"    pm.expect(data.timestamp_0).is.to.eql(jsonData[0].timestamp);\r",
+							"    if(data.timestamp_1 != \"\")\r",
+							"    {\r",
+							"    pm.expect(data.timestamp_1).is.to.eql(jsonData[1].timestamp);\r",
+							"    }\r",
+							" })\r",
+							"pm.test(\"Response data validation for daynum\", function() {\r",
+							"    pm.expect(data.daynum_0).is.to.eql(jsonData[0].daynum);\r",
+							"    if(data.daynum_1 != \"\")\r",
+							"    {\r",
+							"    pm.expect(data.daynum_1).is.to.eql(jsonData[1].daynum);\r",
+							"    }\r",
+							" })\r",
+							" \r",
+							" pm.test(\"Response data validation for solar_lat\", function() {   \r",
+							"    pm.expect(data.solar_lat_0).is.to.eql(jsonData[0].solar_lat);\r",
+							"    if(data.solar_lat_1 != \"\")\r",
+							"    {\r",
+							"    pm.expect(data.solar_lat_1).is.to.eql(jsonData[1].solar_lat);\r",
+							"    }\r",
+							" })\r",
+							"\r",
+							" pm.test(\"Response data validation for solar_lon\", function() {\r",
+							"    pm.expect(data.solar_lon_0).is.to.eql(jsonData[0].solar_lon);\r",
+							"    if(data.solar_lon_1 != \"\")\r",
+							"    {\r",
+							"    pm.expect(data.solar_lon_1).is.to.eql(jsonData[1].solar_lon);\r",
+							"    }\r",
+							" })\r",
+							"\r",
+							"pm.test(\"Response data validation for units\", function() {\r",
+							"    pm.expect(data.units_0).is.to.eql(jsonData[0].units);\r",
+							"    if(data.units_1 != \"\")\r",
+							"    {\r",
+							"    pm.expect(data.units_1).is.to.eql(jsonData[1].units);\r",
+							"    }\r",
+							" })\r",
+							"}\r",
+							"if(jsonData.status == \"400\")\r",
+							"{\r",
+							"    pm.test(\"Status is 400\", function() {\r",
+							"    pm.response.to.have.status(400);\r",
+							" });\r",
+							"\r",
+							"    pm.test(\"Error message validation\", function() {\r",
+							"    pm.expect('invalid timestamp in list: ').is.to.eql(jsonData.error);\r",
+							" });\r",
+							"}\r",
+							"\r",
+							" "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// console.log(\"*************************************_0\")\r",
+							"// console.log(\"TimeStamp value : \" + data.timestamps);\r",
+							"// console.log(\"Units value : \" + data.units);\r",
+							"// console.log(\"name:\" +data.name_0);\r",
+							"// console.log(\"id :\" +data.Id_0);\r",
+							"// console.log(\"latitude :\" +data.latitude_0);\r",
+							"// console.log(\"longitude :\" +data.longitude_0);\r",
+							"// console.log(\"altitude :\" +data.altitude_0);\r",
+							"// console.log(\"velocity :\" +data.velocity_0);\r",
+							"// console.log(\"visibility :\" +data.visibility_0);\r",
+							"// console.log(\"footprint :\" +data.footprint_0);\r",
+							"// console.log(\"timestamp :\" +data.timestamp_0);\r",
+							"// console.log(\"daynum :\" +data.daynum_0);\r",
+							"// console.log(\"solar_lat :\" +data.solar_lat_0);\r",
+							"// console.log(\"solar_lon :\" +data.solar_lon_0);\r",
+							"// console.log(\"units :\" +data.units_0);\r",
+							"// console.log(\"*************************************_1\")\r",
+							"// console.log(\"name:\" +data.name_1);\r",
+							"// console.log(\"id :\" +data.Id_1);\r",
+							"// console.log(\"latitude\" +data.latitude_1);\r",
+							"// console.log(\"longitude\" +data.longitude_1);\r",
+							"// console.log(\"altitude\" +data.altitude_1);\r",
+							"// console.log(\"velocity\" +data.velocity_1);\r",
+							"// console.log(\"visibility\" +data.visibility_1);\r",
+							"// console.log(\"footprint\" +data.footprint_1);\r",
+							"// console.log(\"timestamp\" +data.timestamp_1);\r",
+							"// console.log(\"daynum\" +data.daynum_1);\r",
+							"// console.log(\"solar_lat\" +data.solar_lat_1);\r",
+							"// console.log(\"solar_lon\" +data.solar_lon_1);\r",
+							"// console.log(\"units\" +data.units_1);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.wheretheiss.at/v1/satellites/25544/positions?timestamps={{timestamps}}&units={{units}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"wheretheiss",
+						"at"
+					],
+					"path": [
+						"v1",
+						"satellites",
+						"25544",
+						"positions"
+					],
+					"query": [
+						{
+							"key": "timestamps",
+							"value": "{{timestamps}}"
+						},
+						{
+							"key": "units",
+							"value": "{{units}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "satelites/[id]/tles",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json()\r",
+							"var expected_id = data.Id_0.toString();\r",
+							"var expected_name = data.name_0.toString();\r",
+							"\r",
+							"if(pm.response.code == \"200\"){\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response data validation for tle_timestamp\", function() {\r",
+							"    pm.expect(data.tle_timestamp).is.to.eql(jsonData.tle_timestamp);\r",
+							" })\r",
+							"\r",
+							"pm.test(\"Response data validation for id\", function() {\r",
+							"    pm.expect(expected_id).is.to.eql(jsonData.id);\r",
+							" })\r",
+							"\r",
+							"pm.test(\"Response data validation for name\", function() {\r",
+							"    pm.expect(expected_name).is.to.eql(jsonData.name);\r",
+							" })\r",
+							"\r",
+							"pm.test(\"Response data validation for header\", function() {\r",
+							"    pm.expect(data.header).is.to.eql(jsonData.header);\r",
+							" })\r",
+							"\r",
+							"pm.test(\"Response data validation for line1\", function() {\r",
+							"    pm.expect(data.line1).is.to.eql(jsonData.line1);\r",
+							" })\r",
+							" \r",
+							"pm.test(\"Response data validation for line2\", function() {\r",
+							"    pm.expect(data.line2).is.to.eql(jsonData.line2);\r",
+							" })\r",
+							"} \r",
+							"if(jsonData.status == \"404\")\r",
+							"{\r",
+							"    pm.test(\"Status is 404\", function() {\r",
+							"    pm.response.to.have.status(404);\r",
+							" });\r",
+							"\r",
+							"    pm.test(\"Error message validation\", function() {\r",
+							"    pm.expect('satellite not found: ').is.to.eql(jsonData.error);\r",
+							" });\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.wheretheiss.at/v1/satellites/25544/tles",
+					"protocol": "https",
+					"host": [
+						"api",
+						"wheretheiss",
+						"at"
+					],
+					"path": [
+						"v1",
+						"satellites",
+						"25544",
+						"tles"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

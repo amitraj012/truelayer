@@ -1,17 +1,28 @@
 # truelayer
 
-Download and Install Nodejs package from this URL https://nodejs.org/en/download/
+## Steps to run the solution
 
-Open command prompt
-cd to the directory say "c:/treulayer"
+**Download and Install Nodejs package from the URL https://nodejs.org/en/download/**
 
-Install Newman
+**Open command prompt**
+
+```sh
+cd truelayer
+```
+
+
+**Install Newman**
+```sh
 npm install -g newman
+```
 
-Initialize Newman in the current directory
+**Initialize Newman in the current directory**
+```sh
 npm i newman
+```
 
-Run the test scripts
+**Run the test scripts**
+```sh
 node runner.js
-
-Note: All the above steps can be easily configured in any pipelines (Jenkins or Azure)
+```
+**Note:** All the above steps can be easily configured in any pipelines (Jenkins or Azure)
